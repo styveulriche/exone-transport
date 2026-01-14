@@ -1,0 +1,419 @@
+:root {
+    --gradient-primary: linear-gradient(135deg, #00a8ff 0%, #0066cc 50%, #003d7a 100%);
+    --gradient-dark: linear-gradient(135deg, #d3dee6 0%, #003d7a 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --nav-bg: #ffffff; /* Blanc pour la navigation */
+    --card-bg: #ffffff; /* Blanc pour les cartes */
+    --text-primary: #1a202c; /* Couleur de texte foncée pour contraste */
+    --text-secondary: #0d0d0e; /* Couleur de texte secondaire */
+}
+
+.dark {
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --nav-bg: #ffffff; /* Garde la navigation blanche même en dark mode */
+    --card-bg: #ffffff; /* Garde les cartes blanches même en dark mode */
+    --text-primary: #1a202c; /* Texte foncé pour contraste */
+    --text-secondary: #4a5568;
+}
+
+/* Styles pour la barre de navigation */
+nav, .navbar, header, [class*="nav"], [class*="header"] {
+    background-color: var(--nav-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Styles pour les cartes */
+.card, [class*="card"], [class*="Card"], .service-card, .glass, .bg-gray-800, .bg-gray-900, .bg-dark, [class*="bg-"] {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ajustement des couleurs de texte dans les éléments blancs */
+nav *, .navbar *, header *, .card *, [class*="card"] *, .service-card * {
+    color: var(--text-primary) !important;
+}
+
+/* Ajustement spécifique pour les liens dans la navigation */
+nav a, .navbar a, header a {
+    color: var(--text-primary) !important;
+}
+
+nav a:hover, .navbar a:hover, header a:hover {
+    color: #0066cc !important;
+}
+
+/* Ajustement pour les titres dans les cartes */
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+[class*="card"] h1, [class*="card"] h2, [class*="card"] h3,
+[class*="card"] h4, [class*="card"] h5, [class*="card"] h6 {
+    color: var(--text-primary) !important;
+}
+
+/* Ajustement pour les paragraphes dans les cartes */
+.card p, [class*="card"] p {
+    color: var(--text-secondary) !important;
+}
+
+/* Ajustement pour les effets glass sur fond blanc */
+.glass {
+    background: rgba(221, 217, 217, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ajustement pour les boutons dans les cartes */
+.card button, [class*="card"] button {
+    background-color: #0066cc !important;
+    color: rgb(187, 183, 183) !important;
+    border: none !important;
+}
+
+.card button:hover, [class*="card"] button:hover {
+    background-color: #0052a3 !important;
+}
+
+/* Ajustement pour les bordures et ombres */
+.card, .service-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card:hover, .service-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ajustement pour le scrollbar */
+::-webkit-scrollbar-track {
+    background: #b4b1b1 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00a8ff, #0066cc) !important;
+}
+
+/* Ajustement pour les états hover sur navigation */
+nav a:hover, .navbar a:hover {
+    background-color: rgba(0, 102, 204, 0.1) !important;
+}
+
+/* Ajustement pour le dropdown menu */
+.dropdown-menu {
+    background-color: white !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdown-menu a {
+    color: var(--text-primary) !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 102, 204, 0.1) !important;
+    color: #0066cc !important;
+}
+
+/* Pour s'assurer que tous les éléments de type section avec fond sombre deviennent blancs */
+section, .section, [class*="section"] {
+    background-color: transparent !important;
+}
+
+/* Exception pour le hero section si elle existe */
+.hero-bg {
+    background: linear-gradient(-45deg, #001a2b, #003d7a, #0066cc, #00a8ff) !important;
+    background-size: 400% 400% !important;
+    animation: gradientShift 15s ease infinite !important;
+}
+
+/* Garde le texte gradient pour certains éléments spécifiques */
+.gradient-text {
+    background: var(--gradient-primary) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* Ajustement responsive */
+@media (max-width: 768px) {
+    .mobile-menu {
+        background-color: rgb(242, 238, 238) !important;
+        color: var(--text-primary) !important;
+    }
+    
+    .mobile-menu a {
+        color: var(--text-primary) !important;
+    }
+    
+    .mobile-menu a:hover {
+        color: #0066cc !important;
+        background-color: rgba(0, 102, 204, 0.1) !important;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Animated background */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 168, 255, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(0, 168, 255, 0.8); }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slide in animations */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+.animate-slide-right { animation: slideInRight 0.8s ease-out forwards; }
+.animate-slide-up { animation: slideInUp 0.8s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+
+/* Moving truck animation */
+@keyframes truckMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(calc(100vw + 100%)); }
+}
+
+.truck-animation {
+    animation: truckMove 20s linear infinite;
+}
+
+/* Particles */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 168, 255, 0.3);
+    border-radius: 50%;
+    animation: floatParticle 8s ease-in-out infinite;
+}
+
+@keyframes floatParticle {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+    25% { transform: translate(100px, -100px) rotate(90deg); opacity: 0.8; }
+    50% { transform: translate(50px, -200px) rotate(180deg); opacity: 0.5; }
+    75% { transform: translate(-50px, -100px) rotate(270deg); opacity: 0.7; }
+}
+
+/* Service card hover */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile menu */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+/* Form styles */
+.form-input {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.form-input:focus {
+    border-color: #00a8ff;
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
+}
+
+/* Checkbox custom */
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0066cc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-checkbox:checked {
+    background: linear-gradient(135deg, #00a8ff, #0066cc);
+    border-color: #00a8ff;
+}
+
+.custom-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Section reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accordion */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+}
+
+/* Modal */
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Geometric shapes background */
+.geo-shape {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Loading animation */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top-color: #00a8ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    html { font-size: 14px; }
+}
+
+/* Logo animation */
+@keyframes logoShine {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+    100% { filter: brightness(1); }
+}
+
+.logo-shine:hover {
+    animation: logoShine 1s ease-in-out;
+}

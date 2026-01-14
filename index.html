@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXONE TRANSPORT - Déménagement Professionnel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f4ff',
+                            100: '#b3dfff',
+                            200: '#80caff',
+                            300: '#4db5ff',
+                            400: '#1aa0ff',
+                            500: '#0088e6',
+                            600: '#006bb3',
+                            700: '#004d80',
+                            800: '#00304d',
+                            900: '#001a2b'
+                        },
+                        accent: {
+                            light: '#00a8ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#003d7a'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass dark:bg-gray-900/90 bg-white/90">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 logo-shine">
+                   
+                    <div class="hidden sm:block">
+                        <img src="LOGO EXONE 2.png" alt="EXONE TRANSPORT" class="h-8 md:h-10 w-auto">
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="#accueil" class="nav-link font-medium hover:text-accent-light transition-colors" data-fr="Accueil" data-en="Home">Accueil</a>
+
+                    <!-- Services Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link font-medium hover:text-accent-light transition-colors flex items-center gap-1" data-fr="Services" data-en="Services">
+                            Services <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
+                            <!-- Déménagement -->
+                            <div class="submenu-group">
+                                <div class="px-4 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold flex items-center gap-2">
+                                    <i class="fas fa-truck-moving"></i>
+                                    <span data-fr="Déménagement" data-en="Moving">Déménagement</span>
+                                </div>
+                                <a href="#demenagement" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Résidentiel" data-en="Residential">Résidentiel</a>
+                                <a href="#demenagement" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Commercial" data-en="Commercial">Commercial</a>
+                                <a href="#demenagement" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Industriel" data-en="Industrial">Industriel</a>
+                                <a href="#demenagement" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Main d'œuvre" data-en="Labor">Main d'œuvre</a>
+                            </div>
+                            <!-- Transport -->
+                            <div class="submenu-group border-t dark:border-gray-700">
+                                <div class="px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold flex items-center gap-2">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <span data-fr="Transport" data-en="Transport">Transport</span>
+                                </div>
+                                <a href="#transport" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Longue distance" data-en="Long distance">Longue distance</a>
+                                <a href="#transport" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Courte distance" data-en="Short distance">Courte distance</a>
+                                <a href="#transport" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Hors province" data-en="Out of province">Hors province</a>
+                                <a href="#transport" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Sous contrat" data-en="Under contract">Sous contrat</a>
+                            </div>
+                            <!-- Entreposage -->
+                            <div class="submenu-group border-t dark:border-gray-700">
+                                <div class="px-4 py-3 bg-gradient-to-r from-primary-700 to-accent-dark text-white font-semibold flex items-center gap-2">
+                                    <i class="fas fa-warehouse"></i>
+                                    <span data-fr="Entreposage" data-en="Storage">Entreposage</span>
+                                </div>
+                                <a href="#entreposage" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Espace d'entreposage" data-en="Storage space">Espace d'entreposage</a>
+                            </div>
+                            <!-- Location -->
+                            <div class="submenu-group border-t dark:border-gray-700">
+                                <div class="px-4 py-3 bg-gradient-to-r from-accent-dark to-primary-800 text-white font-semibold flex items-center gap-2">
+                                    <i class="fas fa-key"></i>
+                                    <span data-fr="Location" data-en="Rental">Location</span>
+                                </div>
+                                <a href="#location" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Camion" data-en="Truck">Camion</a>
+                                <a href="#location" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Camion et chauffeur" data-en="Truck and driver">Camion et chauffeur</a>
+                                <a href="#location" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Équipement" data-en="Equipment">Équipement</a>
+                                <a href="#location" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Accessoires" data-en="Accessories">Accessoires</a>
+                            </div>
+                            <!-- Assurance -->
+                            <div class="submenu-group border-t dark:border-gray-700">
+                                <div class="px-4 py-3 bg-gradient-to-r from-primary-800 to-primary-900 text-white font-semibold flex items-center gap-2">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span data-fr="Assurance" data-en="Insurance">Assurance</span>
+                                </div>
+                                <a href="#assurance" class="block px-6 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors" data-fr="Assurance déménagement" data-en="Moving insurance">Assurance déménagement</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#apropos" class="nav-link font-medium hover:text-accent-light transition-colors" data-fr="À propos" data-en="About">À propos</a>
+                    <a href="#soumission" class="nav-link font-medium hover:text-accent-light transition-colors" data-fr="Soumission" data-en="Quote">Soumission</a>
+                    <a href="#contact" class="nav-link font-medium hover:text-accent-light transition-colors" data-fr="Contact" data-en="Contact">Contact</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="flex items-center space-x-3">
+                    <!-- Language Toggle -->
+                    <button id="langToggle" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary-100 dark:bg-gray-800 hover:bg-primary-200 dark:hover:bg-gray-700 transition-all">
+                        <i class="fas fa-globe text-primary-600 dark:text-primary-400"></i>
+                        <span class="text-sm font-medium" id="currentLang">FR</span>
+                    </button>
+
+                    <!-- CTA Button -->
+                    <a href="#soumission" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/30 transition-all transform hover:scale-105">
+                        <span data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 lg:hidden">
+        <div class="absolute inset-0 bg-black/50" id="mobileMenuOverlay"></div>
+        <div class="relative w-80 max-w-full h-full bg-white dark:bg-gray-900 shadow-2xl overflow-y-auto">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-8">
+                    <img src="LOGO EXONE 1.png" alt="EXONE TRANSPORT" class="h-12">
+                    <button id="closeMobileMenu" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <nav class="space-y-4">
+                    <a href="#accueil" class="block py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors" data-fr="Accueil" data-en="Home">Accueil</a>
+
+                    <!-- Mobile Accordion Menu -->
+                    <div class="mobile-accordion">
+                        <button class="accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-truck-moving text-primary-500"></i>
+                                <span data-fr="Déménagement" data-en="Moving">Déménagement</span>
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </button>
+                        <div class="accordion-content pl-12 space-y-2">
+                            <a href="#demenagement" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Résidentiel" data-en="Residential">Résidentiel</a>
+                            <a href="#demenagement" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Commercial" data-en="Commercial">Commercial</a>
+                            <a href="#demenagement" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Industriel" data-en="Industrial">Industriel</a>
+                            <a href="#demenagement" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Main d'œuvre" data-en="Labor">Main d'œuvre</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button class="accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-shipping-fast text-primary-500"></i>
+                                <span data-fr="Transport" data-en="Transport">Transport</span>
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </button>
+                        <div class="accordion-content pl-12 space-y-2">
+                            <a href="#transport" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Longue distance" data-en="Long distance">Longue distance</a>
+                            <a href="#transport" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Courte distance" data-en="Short distance">Courte distance</a>
+                            <a href="#transport" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Hors province" data-en="Out of province">Hors province</a>
+                            <a href="#transport" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Sous contrat" data-en="Under contract">Sous contrat</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button class="accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-warehouse text-primary-500"></i>
+                                <span data-fr="Entreposage" data-en="Storage">Entreposage</span>
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </button>
+                        <div class="accordion-content pl-12 space-y-2">
+                            <a href="#entreposage" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Espace d'entreposage" data-en="Storage space">Espace d'entreposage</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button class="accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-key text-primary-500"></i>
+                                <span data-fr="Location" data-en="Rental">Location</span>
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </button>
+                        <div class="accordion-content pl-12 space-y-2">
+                            <a href="#location" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Camion" data-en="Truck">Camion</a>
+                            <a href="#location" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Camion et chauffeur" data-en="Truck and driver">Camion et chauffeur</a>
+                            <a href="#location" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Équipement" data-en="Equipment">Équipement</a>
+                            <a href="#location" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Accessoires" data-en="Accessories">Accessoires</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-accordion">
+                        <button class="accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-shield-alt text-primary-500"></i>
+                                <span data-fr="Assurance" data-en="Insurance">Assurance</span>
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </button>
+                        <div class="accordion-content pl-12 space-y-2">
+                            <a href="#assurance" class="block py-2 text-gray-600 dark:text-gray-400 hover:text-primary-500" data-fr="Assurance déménagement" data-en="Moving insurance">Assurance déménagement</a>
+                        </div>
+                    </div>
+
+                    <a href="#apropos" class="block py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors" data-fr="À propos" data-en="About">À propos</a>
+                    <a href="#soumission" class="block py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors" data-fr="Soumission" data-en="Quote">Soumission</a>
+                    <a href="#contact" class="block py-3 px-4 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-800 font-medium transition-colors" data-fr="Contact" data-en="Contact">Contact</a>
+                </nav>
+
+                <!-- Social Links Mobile -->
+                <div class="mt-8 pt-6 border-t dark:border-gray-800">
+                    <p class="text-sm text-gray-500 mb-4" data-fr="Suivez-nous" data-en="Follow us">Suivez-nous</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 hover:bg-primary-500 hover:text-white transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 hover:bg-primary-500 hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 hover:bg-primary-500 hover:text-white transition-all">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 hover:bg-primary-500 hover:text-white transition-all">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative min-h-screen flex items-center hero-bg overflow-hidden pt-20">
+        <!-- Particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="particle" style="top: 20%; left: 10%;"></div>
+            <div class="particle" style="top: 40%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle" style="top: 60%; left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="top: 80%; left: 70%; animation-delay: 6s;"></div>
+            <div class="particle" style="top: 30%; left: 50%; animation-delay: 1s;"></div>
+        </div>
+
+        <!-- Geometric shapes -->
+        <div class="geo-shape w-64 h-64 border-2 border-white/20 rounded-full absolute -top-20 -right-20"></div>
+        <div class="geo-shape w-96 h-96 border-2 border-white/10 rounded-full absolute -bottom-40 -left-40" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-8">
+                    <div class="animate-slide-left opacity-0" style="animation-fill-mode: forwards;">
+                        <span class="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium backdrop-blur-sm" data-fr="Plus de 20 ans d'expérience" data-en="Over 20 years of experience">
+                            ✨ Plus de 20 ans d'expérience
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-tight animate-slide-left opacity-0 animation-delay-100" style="animation-fill-mode: forwards;">
+                        <span data-fr="Votre partenaire de" data-en="Your trusted">Votre partenaire de</span><br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary-200 to-white" data-fr="confiance pour" data-en="moving">confiance pour</span><br>
+                        <span data-fr="le déménagement" data-en="partner">le déménagement</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-white/80 max-w-xl animate-slide-left opacity-0 animation-delay-200" style="animation-fill-mode: forwards;" data-fr="EXONE TRANSPORT vous offre des services de déménagement, transport, entreposage et location de qualité supérieure partout au Québec." data-en="EXONE TRANSPORT offers you superior quality moving, transport, storage and rental services throughout Quebec.">
+                        EXONE TRANSPORT vous offre des services de déménagement, transport, entreposage et location de qualité supérieure partout au Québec.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 animate-slide-left opacity-0 animation-delay-300" style="animation-fill-mode: forwards;">
+                        <a href="#soumission" class="group flex items-center gap-3 px-8 py-4 bg-white text-primary-700 rounded-full font-bold hover:bg-primary-50 transition-all transform hover:scale-105 shadow-xl">
+                            <span data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services" class="flex items-center gap-3 px-8 py-4 border-2 border-white/50 text-white rounded-full font-bold hover:bg-white/10 transition-all">
+                            <i class="fas fa-play-circle"></i>
+                            <span data-fr="Nos services" data-en="Our services">Nos services</span>
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 animate-slide-left opacity-0 animation-delay-400" style="animation-fill-mode: forwards;">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold">20+</div>
+                            <div class="text-sm text-white/70" data-fr="Années d'expérience" data-en="Years of experience">Années d'expérience</div>
+                        </div>
+                        <div class="text-center border-x border-white/20">
+                            <div class="text-3xl md:text-4xl font-bold">5000+</div>
+                            <div class="text-sm text-white/70" data-fr="Clients satisfaits" data-en="Satisfied clients">Clients satisfaits</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold">100%</div>
+                            <div class="text-sm text-white/70" data-fr="Professionnalisme" data-en="Professionalism">Professionnalisme</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Logo -->
+                <div class="relative hidden lg:block animate-slide-right opacity-0 animation-delay-200" style="animation-fill-mode: forwards;">
+                    <div class="relative w-full aspect-square max-w-lg mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl backdrop-blur-sm"></div>
+                        <div class="absolute inset-4 flex items-center justify-center">
+                            <img src="LOGO EXONE 1.png" alt="EXONE TRANSPORT" class="w-3/4 float-animation drop-shadow-2xl">
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-accent-light to-transparent rounded-full blur-xl opacity-60"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-primary-400 to-transparent rounded-full blur-xl opacity-60"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#services" class="flex flex-col items-center text-white/60 hover:text-white transition-colors">
+                <span class="text-sm mb-2" data-fr="Défiler" data-en="Scroll">Défiler</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium mb-4" data-fr="Nos services" data-en="Our services">Nos services</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4">
+                    <span class="gradient-text" data-fr="Solutions complètes" data-en="Complete solutions">Solutions complètes</span>
+                    <span data-fr="pour vos besoins" data-en="for your needs"> pour vos besoins</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-fr="Découvrez notre gamme complète de services professionnels adaptés à tous vos besoins de déménagement et transport." data-en="Discover our complete range of professional services tailored to all your moving and transport needs.">
+                    Découvrez notre gamme complète de services professionnels adaptés à tous vos besoins de déménagement et transport.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Déménagement Card -->
+                <div id="demenagement" class="service-card bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Déménagement" data-en="Moving">Déménagement</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Services de déménagement professionnels pour particuliers et entreprises." data-en="Professional moving services for individuals and businesses.">
+                        Services de déménagement professionnels pour particuliers et entreprises.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Résidentiel" data-en="Residential">Résidentiel</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Commercial" data-en="Commercial">Commercial</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Industriel" data-en="Industrial">Industriel</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Main d'œuvre" data-en="Labor">Main d'œuvre</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Transport Card -->
+                <div id="transport" class="service-card bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-light to-accent-dark rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Transport" data-en="Transport">Transport</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Solutions de transport adaptées à toutes les distances." data-en="Transport solutions adapted to all distances.">
+                        Solutions de transport adaptées à toutes les distances.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Longue distance" data-en="Long distance">Longue distance</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Courte distance" data-en="Short distance">Courte distance</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Hors province" data-en="Out of province">Hors province</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Sous contrat" data-en="Under contract">Sous contrat</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Entreposage Card -->
+                <div id="entreposage" class="service-card bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Entreposage" data-en="Storage">Entreposage</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Espaces d'entreposage sécurisés pour vos biens." data-en="Secure storage spaces for your belongings.">
+                        Espaces d'entreposage sécurisés pour vos biens.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Espace d'entreposage" data-en="Storage space">Espace d'entreposage</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Sécurité 24/7" data-en="24/7 Security">Sécurité 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Accès facile" data-en="Easy access">Accès facile</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location Card -->
+                <div id="location" class="service-card bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-dark to-primary-900 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Location" data-en="Rental">Location</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Location de camions, équipements et accessoires." data-en="Truck, equipment and accessories rental.">
+                        Location de camions, équipements et accessoires.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Camion" data-en="Truck">Camion</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Camion et chauffeur" data-en="Truck and driver">Camion et chauffeur</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Équipement" data-en="Equipment">Équipement</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Accessoires" data-en="Accessories">Accessoires</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Assurance Card -->
+                <div id="assurance" class="service-card bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl hover:shadow-2xl reveal">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-light rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Assurance" data-en="Insurance">Assurance</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Protection complète pour votre tranquillité d'esprit." data-en="Complete protection for your peace of mind.">
+                        Protection complète pour votre tranquillité d'esprit.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Assurance déménagement" data-en="Moving insurance">Assurance déménagement</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Couverture complète" data-en="Full coverage">Couverture complète</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-primary-500"></i>
+                            <span data-fr="Réclamation facile" data-en="Easy claims">Réclamation facile</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="service-card bg-gradient-to-br from-primary-500 via-accent to-primary-700 rounded-2xl p-8 text-white flex flex-col justify-center items-center text-center reveal">
+                    <i class="fas fa-headset text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4 font-heading" data-fr="Besoin d'aide?" data-en="Need help?">Besoin d'aide?</h3>
+                    <p class="mb-6 text-white/90" data-fr="Notre équipe est disponible pour répondre à toutes vos questions." data-en="Our team is available to answer all your questions.">
+                        Notre équipe est disponible pour répondre à toutes vos questions.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-600 rounded-full font-bold hover:bg-primary-50 transition-all">
+                        <i class="fas fa-phone"></i>
+                        <span data-fr="Contactez-nous" data-en="Contact us">Contactez-nous</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal">
+                    <div class="relative aspect-square max-w-md mx-auto">
+                        <!-- Decorative background -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/30 dark:to-primary-800/30 rounded-3xl transform rotate-6"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-200 to-primary-300 dark:from-primary-800/30 dark:to-primary-700/30 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl flex items-center justify-center">
+                            <img src="LOGO EXONE 3.png" alt="EXONE TRANSPORT" class="w-full float-animation">
+                        </div>
+                        <!-- Badge -->
+                        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary-500 to-accent-dark text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                            20+ <span data-fr="ans" data-en="years">ans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 reveal">
+                    <span class="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium" data-fr="À propos de nous" data-en="About us">À propos de nous</span>
+
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading">
+                        <span class="gradient-text">EXONE TRANSPORT</span>
+                    </h2>
+
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-fr="Avec plus de 20 ans d'expérience dans le domaine du déménagement et du transport, EXONE TRANSPORT s'est établi comme un leader de confiance au Québec." data-en="With over 20 years of experience in the moving and transportation industry, EXONE TRANSPORT has established itself as a trusted leader in Quebec.">
+                        Avec plus de 20 ans d'expérience dans le domaine du déménagement et du transport, EXONE TRANSPORT s'est établi comme un leader de confiance au Québec.
+                    </p>
+
+                    <p class="text-gray-600 dark:text-gray-400" data-fr="Notre équipe de professionnels dévoués s'engage à fournir des services de qualité supérieure, que ce soit pour un déménagement résidentiel, commercial ou industriel." data-en="Our team of dedicated professionals is committed to providing superior quality services, whether for residential, commercial or industrial moving.">
+                        Notre équipe de professionnels dévoués s'engage à fournir des services de qualité supérieure, que ce soit pour un déménagement résidentiel, commercial ou industriel.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 py-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-medal text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-fr="Professionnalisme" data-en="Professionalism">Professionnalisme</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400" data-fr="Service de qualité supérieure" data-en="Superior quality service">Service de qualité supérieure</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-fr="Ponctualité" data-en="Punctuality">Ponctualité</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400" data-fr="Respect des délais" data-en="Meeting deadlines">Respect des délais</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-hand-holding-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-fr="Soin" data-en="Care">Soin</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400" data-fr="Manipulation avec soin" data-en="Careful handling">Manipulation avec soin</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-dollar-sign text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-fr="Prix compétitifs" data-en="Competitive prices">Prix compétitifs</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400" data-fr="Meilleur rapport qualité/prix" data-en="Best value">Meilleur rapport qualité/prix</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#soumission" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full font-bold hover:shadow-lg hover:shadow-primary-500/30 transition-all transform hover:scale-105">
+                        <span data-fr="Demander une soumission" data-en="Request a quote">Demander une soumission</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="soumission" class="py-20 hero-bg relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12 text-white reveal">
+                <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-4 backdrop-blur-sm" data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4" data-fr="Obtenez votre soumission" data-en="Get your quote">Obtenez votre soumission</h2>
+                <p class="text-white/80 max-w-2xl mx-auto" data-fr="Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement. Nous communiquerons avec vous dans les plus brefs délais." data-en="To facilitate and speed up your free online quote, please correctly indicate everything that represents your move. We will contact you as soon as possible.">
+                    Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement. Nous communiquerons avec vous dans les plus brefs délais.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto reveal">
+                <form id="quoteForm" class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <!-- Personal Info -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
+                            <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">1</span>
+                            <span data-fr="Informations personnelles" data-en="Personal Information">Informations personnelles</span>
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="Nom complet *" data-en="Full name *">Nom complet *</label>
+                                <input type="text" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base" placeholder="Saisissez votre nom" data-placeholder-fr="Saisissez votre nom" data-placeholder-en="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
+                                <input type="tel" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base" placeholder="Saisissez votre numéro" data-placeholder-fr="Saisissez votre numéro" data-placeholder-en="Enter your number">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="E-mail *" data-en="Email *">E-mail *</label>
+                                <input type="email" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base" placeholder="Saisissez votre e-mail" data-placeholder-fr="Saisissez votre e-mail" data-placeholder-en="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="Date du déménagement *" data-en="Moving date *">Date du déménagement *</label>
+                                <input type="date" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
+                            <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">2</span>
+                            <span data-fr="Adresses" data-en="Addresses">Adresses</span>
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="Adresse de votre domicile actuel *" data-en="Current address *">Adresse de votre domicile actuel *</label>
+                                <input type="text" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base" placeholder="Adresse" data-placeholder-fr="Adresse" data-placeholder-en="Address">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2" data-fr="Adresse de votre domicile futur *" data-en="Future address *">Adresse de votre domicile futur *</label>
+                                <input type="text" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base" placeholder="Adresse" data-placeholder-fr="Adresse" data-placeholder-en="Address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Type -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
+                            <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">3</span>
+                            <span data-fr="Choisir ce qui s'applique à votre déménagement" data-en="Choose what applies to your move">Choisir ce qui s'applique à votre déménagement</span>
+                        </h3>
+
+                        <!-- Residential -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Résidentiel --" data-en="-- Residential --">-- Résidentiel --</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="condo" class="custom-checkbox">
+                                    <span>Condo</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="appartement" class="custom-checkbox">
+                                    <span data-fr="Appartement" data-en="Apartment">Appartement</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="maison" class="custom-checkbox">
+                                    <span data-fr="Maison" data-en="House">Maison</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Commercial -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Commercial --" data-en="-- Commercial --">-- Commercial --</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="local_commercial" class="custom-checkbox">
+                                    <span data-fr="Local Commercial" data-en="Commercial Space">Local Commercial</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="bureau" class="custom-checkbox">
+                                    <span data-fr="Bureau Commercial" data-en="Office">Bureau Commercial</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="checkbox" name="property_type" value="industriel" class="custom-checkbox">
+                                    <span data-fr="Industriel" data-en="Industrial">Industriel</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Floors -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Nombre d'étages --" data-en="-- Number of floors --">-- Nombre d'étages --</h4>
+                            <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="floors" value="1" class="custom-checkbox">
+                                    <span data-fr="1 étage" data-en="1 floor">1 étage</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="floors" value="2" class="custom-checkbox">
+                                    <span data-fr="2 étages" data-en="2 floors">2 étages</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="floors" value="3" class="custom-checkbox">
+                                    <span data-fr="3 étages" data-en="3 floors">3 étages</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="floors" value="4" class="custom-checkbox">
+                                    <span data-fr="4 étages" data-en="4 floors">4 étages</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="floors" value="5+" class="custom-checkbox">
+                                    <span data-fr="5 étages +" data-en="5+ floors">5 étages +</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Elevator -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Ascenseur --" data-en="-- Elevator --">-- Ascenseur --</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="elevator" value="yes" class="custom-checkbox">
+                                    <span data-fr="Ascenseur disponible" data-en="Elevator available">Ascenseur disponible</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="elevator" value="no" class="custom-checkbox">
+                                    <span data-fr="Ascenseur non disponible" data-en="No elevator">Ascenseur non disponible</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Rooms -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Nombre de pièces --" data-en="-- Number of rooms --">-- Nombre de pièces --</h4>
+                            <div class="grid grid-cols-3 md:grid-cols-5 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="1.5" class="custom-checkbox">
+                                    <span>1 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="2.5" class="custom-checkbox">
+                                    <span>2 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="3.5" class="custom-checkbox">
+                                    <span>3 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="4.5" class="custom-checkbox">
+                                    <span>4 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="5.5" class="custom-checkbox">
+                                    <span>5 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="6.5" class="custom-checkbox">
+                                    <span>6 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="7.5" class="custom-checkbox">
+                                    <span>7 1/2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="rooms" value="8.5+" class="custom-checkbox">
+                                    <span>8 1/2 +</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Appliances -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Nombre d'électroménagers --" data-en="-- Number of appliances --">-- Nombre d'électroménagers --</h4>
+                            <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="appliances" value="1" class="custom-checkbox">
+                                    <span>1</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="appliances" value="2" class="custom-checkbox">
+                                    <span>2</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="appliances" value="3" class="custom-checkbox">
+                                    <span>3</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="appliances" value="4" class="custom-checkbox">
+                                    <span>4</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="appliances" value="5+" class="custom-checkbox">
+                                    <span>5+</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Bedrooms -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-primary-600 dark:text-primary-400 mb-3" data-fr="-- Nombre de chambres --" data-en="-- Number of bedrooms --">-- Nombre de chambres --</h4>
+                            <div class="grid grid-cols-3 md:grid-cols-5 gap-3">
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="1" class="custom-checkbox">
+                                    <span data-fr="1 chambre" data-en="1 bedroom">1 chambre</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="2" class="custom-checkbox">
+                                    <span data-fr="2 chambres" data-en="2 bedrooms">2 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="3" class="custom-checkbox">
+                                    <span data-fr="3 chambres" data-en="3 bedrooms">3 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="4" class="custom-checkbox">
+                                    <span data-fr="4 chambres" data-en="4 bedrooms">4 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="5" class="custom-checkbox">
+                                    <span data-fr="5 chambres" data-en="5 bedrooms">5 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="6" class="custom-checkbox">
+                                    <span data-fr="6 chambres" data-en="6 bedrooms">6 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="7" class="custom-checkbox">
+                                    <span data-fr="7 chambres" data-en="7 bedrooms">7 chambres</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
+                                    <input type="radio" name="bedrooms" value="8+" class="custom-checkbox">
+                                    <span data-fr="8 chambres +" data-en="8+ bedrooms">8 chambres +</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Instructions -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
+                            <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">4</span>
+                            <span data-fr="Instructions supplémentaires" data-en="Additional instructions">Instructions supplémentaires</span>
+                        </h3>
+                        <textarea rows="4" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none text-base resize-none" placeholder="Rédigez une réponse..." data-placeholder-fr="Rédigez une réponse..." data-placeholder-en="Write a response..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3">
+                        <span data-fr="Envoyer ma demande" data-en="Send my request">Envoyer ma demande</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 reveal">
+                <span class="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium mb-4" data-fr="Contact" data-en="Contact">Contact</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4">
+                    <span class="gradient-text" data-fr="Restez connecté" data-en="Stay connected">Restez connecté</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-fr="Suivez-nous sur les réseaux sociaux et contactez-nous à tout moment." data-en="Follow us on social media and contact us anytime.">
+                    Suivez-nous sur les réseaux sociaux et contactez-nous à tout moment.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto reveal">
+                <!-- Facebook -->
+                <a href="#" class="group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 text-center">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Facebook</h3>
+                    <p class="text-sm text-gray-500" data-fr="Suivez notre page" data-en="Follow our page">Suivez notre page</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#" class="group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 text-center">
+                    <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center text-pink-600 text-2xl mx-auto mb-4 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 group-hover:text-white transition-all">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Instagram</h3>
+                    <p class="text-sm text-gray-500" data-fr="Nos photos" data-en="Our photos">Nos photos</p>
+                </a>
+
+                <!-- TikTok -->
+                <a href="#" class="group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 text-center">
+                    <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center text-gray-800 dark:text-white text-2xl mx-auto mb-4 group-hover:bg-black group-hover:text-white transition-all">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">TikTok</h3>
+                    <p class="text-sm text-gray-500" data-fr="Nos vidéos" data-en="Our videos">Nos vidéos</p>
+                </a>
+
+                <!-- Google -->
+                <a href="#" class="group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 text-center">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-2xl flex items-center justify-center text-red-500 text-2xl mx-auto mb-4 group-hover:bg-red-500 group-hover:text-white transition-all">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Google</h3>
+                    <p class="text-sm text-gray-500" data-fr="Nos avis" data-en="Our reviews">Nos avis</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="bg-black text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <!-- Logo & Info -->
+            <div class="footer-section">
+                <div class="hidden sm:block">
+                    <img src="LOGO EXONE 2.png" alt="EXONE TRANSPORT" class="h-8 md:h-10 w-auto">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white">EXONE TRANSPORT</h3>
+                <p class="text-gray-300 text-sm" data-fr="Votre partenaire de confiance pour tous vos besoins de déménagement et transport depuis plus de 20 ans." data-en="Your trusted partner for all your moving and transport needs for over 20 years.">
+                    Votre partenaire de confiance pour tous vos besoins de déménagement et transport depuis plus de 20 ans.
+                </p>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section">
+                <h4 class="font-bold text-lg mb-6 text-white" data-fr="Services" data-en="Services">Services</h4>
+                <ul class="footer-links space-y-3">
+                    <li><a href="#demenagement" class="hover:text-blue-400 transition-all duration-300" data-fr="Déménagement" data-en="Moving">Déménagement</a></li>
+                    <li><a href="#transport" class="hover:text-blue-400 transition-all duration-300" data-fr="Transport" data-en="Transport">Transport</a></li>
+                    <li><a href="#entreposage" class="hover:text-blue-400 transition-all duration-300" data-fr="Entreposage" data-en="Storage">Entreposage</a></li>
+                    <li><a href="#location" class="hover:text-blue-400 transition-all duration-300" data-fr="Location" data-en="Rental">Location</a></li>
+                    <li><a href="#assurance" class="hover:text-blue-400 transition-all duration-300" data-fr="Assurance" data-en="Insurance">Assurance</a></li>
+                </ul>
+            </div>
+
+            <!-- Links -->
+            <div class="footer-section">
+                <h4 class="font-bold text-lg mb-6 text-white" data-fr="Liens rapides" data-en="Quick links">Liens rapides</h4>
+                <ul class="footer-links space-y-3">
+                    <li><a href="#accueil" class="hover:text-blue-400 transition-all duration-300" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                    <li><a href="#apropos" class="hover:text-blue-400 transition-all duration-300" data-fr="À propos" data-en="About">À propos</a></li>
+                    <li><a href="#soumission" class="hover:text-blue-400 transition-all duration-300" data-fr="Soumission" data-en="Quote">Soumission</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition-all duration-300" data-fr="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-section">
+                <h4 class="font-bold text-lg mb-6 text-white" data-fr="Suivez-nous" data-en="Follow us">Suivez-nous</h4>
+                <div class="social-icons flex gap-4 mb-6">
+                    <a href="#" class="social-icon facebook-icon w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram-icon w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon tiktok-icon w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon whatsapp-icon w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <a href="#" class="inline-flex items-center gap-3 px-6 py-3 bg-green-500 rounded-full hover:bg-green-600 transition-all duration-300 text-sm font-medium hover:scale-105 hover:shadow-lg">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Contact WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 EXONE TRANSPORT. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="#" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl hover:bg-green-600 transition-all shadow-lg hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50" onclick="closeModal()"></div>
+        <div class="relative bg-white dark:bg-gray-900 rounded-3xl p-8 max-w-md w-full text-center shadow-2xl transform scale-95 opacity-0 transition-all modal-content">
+            <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-500 text-4xl mx-auto mb-6">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4" data-fr="Merci!" data-en="Thank you!">Merci!</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-6" data-fr="Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais." data-en="Your request has been sent successfully. We will contact you as soon as possible.">
+                Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais.
+            </p>
+            <button onclick="closeModal()" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full font-bold hover:shadow-lg transition-all">
+                <span data-fr="Fermer" data-en="Close">Fermer</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
