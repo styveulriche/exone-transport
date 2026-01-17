@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         tailwind.config = {
@@ -43,7 +43,6 @@
             }
         }
     </script>
-   
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
     <!-- Header -->
@@ -51,18 +50,9 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-3">
                 <!-- Logo -->
-               
-                
                 <a href="#" class="flex items-center space-x-3 logo-shine">
-                    <a href="#" class="flex items-center space-x-3">
-                   
-                    
-
                     <img src="LOGO EXONE 2.png" alt="EXONE TRANSPORT" class="h-8 md:h-10 w-auto">
-                    </a>
-                    <a href="#" class="flex items-center space-x-3">
-                        <span class="text-xl md:text-2xl font-bold gradient-text font-heading">EXONE TRANSPORT</span>
-                    </a>
+                    <span class="text-xl md:text-2xl font-bold gradient-text font-heading">EXONE TRANSPORT</span>
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -95,7 +85,6 @@
                         </div>
                     </div>
 
-                   
                     <a href="#soumission" class="nav-link font-medium hover:text-primary-500 transition-colors" data-fr="Soumission" data-en="Quote">Soumission</a>
                     <a href="#emploi" class="nav-link font-medium hover:text-primary-500 transition-colors" data-fr="Nous embauchons" data-en="We're Hiring">Nous embauchons</a>
                     <a href="#contact" class="nav-link font-medium hover:text-primary-500 transition-colors" data-fr="Contact" data-en="Contact">Contact</a>
@@ -218,11 +207,12 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl backdrop-blur-sm"></div>
                         <div class="absolute inset-4 flex items-center justify-center">
                             <div class="text-8xl text-white float-animation">
-                                 <div class="gallery-slide">
-                        <img src="https://pfst.cf2.poecdn.net/base/image/46b0999507877047c8659b374e93e11b61adad229d2af14371cd2c41f730090e?w=1536&h=1024" alt="EXONE Transport - Service résidentiel" class="gallery-image">
-                    </div>
+                                <div class="gallery-slide">
+                                    <img src="https://pfst.cf2.poecdn.net/base/image/46b0999507877047c8659b374e93e11b61adad229d2af14371cd2c41f730090e?w=1536&h=1024" alt="EXONE Transport - Service résidentiel" class="gallery-image">
+                                </div>
                             </div>
                         </div>
+
                         <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-accent-light to-transparent rounded-full blur-xl opacity-60"></div>
                         <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-primary-400 to-transparent rounded-full blur-xl opacity-60"></div>
                     </div>
@@ -282,46 +272,6 @@
                 <button class="gallery-dot" onclick="goToSlide(1)"></button>
                 <button class="gallery-dot" onclick="goToSlide(2)"></button>
                 <button class="gallery-dot" onclick="goToSlide(3)"></button>
-            </div>
-
-            <!-- Image Grid -->
-            <div class="image-grid mt-12 reveal">
-                <div class="image-card" onclick="openLightbox(0)">
-                    <img src="https://pfst.cf2.poecdn.net/base/image/6a6906346c8ab533a9bf453cda1e5bdc2edd2630fab7cd1b24320cb918c2357d?w=1536&h=1024" alt="EXONE Transport">
-                    <div class="image-card-overlay">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg" data-fr="Déménagement à Québec" data-en="Moving in Quebec">Déménagement à Québec</h4>
-                            <p class="text-sm text-white/80" data-fr="Service professionnel" data-en="Professional service">Service professionnel</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-card" onclick="openLightbox(1)">
-                    <img src="https://pfst.cf2.poecdn.net/base/image/46b0999507877047c8659b374e93e11b61adad229d2af14371cd2c41f730090e?w=1536&h=1024" alt="EXONE Transport">
-                    <div class="image-card-overlay">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg" data-fr="Service résidentiel" data-en="Residential service">Service résidentiel</h4>
-                            <p class="text-sm text-white/80" data-fr="Maisons et appartements" data-en="Houses and apartments">Maisons et appartements</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-card" onclick="openLightbox(2)">
-                    <img src="https://pfst.cf2.poecdn.net/base/image/9593c9259547dfacf0b4cd5545ec9b321f7cd4d41fe07328b326bc3f2a942d7a?w=1536&h=1024" alt="EXONE Transport">
-                    <div class="image-card-overlay">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg" data-fr="Déménagement commercial" data-en="Commercial moving">Déménagement commercial</h4>
-                            <p class="text-sm text-white/80" data-fr="Bureaux et entreprises" data-en="Offices and businesses">Bureaux et entreprises</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-card" onclick="openLightbox(3)">
-                    <img src="https://pfst.cf2.poecdn.net/base/image/d6f3b5f2f0109cad230f2023b5a38f8614b4779b4e804ecf01e020b40c2a5ada?w=1536&h=1024" alt="EXONE Transport">
-                    <div class="image-card-overlay">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg" data-fr="Notre équipe" data-en="Our team">Notre équipe</h4>
-                            <p class="text-sm text-white/80" data-fr="Professionnels dévoués" data-en="Dedicated professionals">Professionnels dévoués</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -502,7 +452,6 @@
         </div>
     </section>
 
-
     <!-- About Section -->
     <section id="apropos" class="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div class="container mx-auto px-4">
@@ -585,14 +534,14 @@
             <div class="text-center mb-12 text-white reveal">
                 <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-4 backdrop-blur-sm" data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</span>
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4" data-fr="Obtenez votre soumission" data-en="Get your quote">Obtenez votre soumission</h2>
-                <p class="text-white/80 max-w-2xl mx-auto text-sm md:text-base" data-fr="Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement." data-en="To facilitate and speed up your free online quote, please correctly indicate everything that represents your move.">
-                    Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement.
+                <p class="text-white/80 max-w-2xl mx-auto text-sm md:text-base" data-fr="Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement. Le tout facilitera votre déménagement et celui du déménageur. Nous communiquerons avec vous par la suite dans les plus brefs délais." data-en="To facilitate and speed up your free online quote, please correctly indicate everything that represents your move. This will facilitate your move and that of the mover. We will contact you as soon as possible.">
+                    Pour faciliter et accélérer votre soumission gratuite en ligne, veuillez indiquer correctement tout ce qui représente votre déménagement. Le tout facilitera votre déménagement et celui du déménageur. Nous communiquerons avec vous par la suite dans les plus brefs délais.
                 </p>
             </div>
 
             <div class="max-w-4xl mx-auto reveal">
                 <form id="quoteForm" class="bg-white dark:bg-gray-900 rounded-3xl p-6 md:p-12 shadow-2xl">
-                    <!-- Personal Info -->
+                    <!-- Informations Personnelles -->
                     <div class="mb-10">
                         <h3 class="text-lg md:text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
                             <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">1</span>
@@ -600,12 +549,12 @@
                         </h3>
                         <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                             <div>
-                                <label class="block text-sm font-medium mb-2" data-fr="Nom complet *" data-en="Full name *">Nom complet *</label>
+                                <label class="block text-sm font-medium mb-2" data-fr="Nom *" data-en="Name *">Nom *</label>
                                 <input type="text" name="name" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none" placeholder="Saisissez votre nom">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2" data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
-                                <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none" placeholder="Saisissez votre numéro">
+                                <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none" placeholder="Saisissez votre numéro de téléphone">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2" data-fr="E-mail *" data-en="Email *">E-mail *</label>
@@ -618,7 +567,7 @@
                         </div>
                     </div>
 
-                    <!-- Addresses -->
+                    <!-- Adresses -->
                     <div class="mb-10">
                         <h3 class="text-lg md:text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
                             <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">2</span>
@@ -626,53 +575,139 @@
                         </h3>
                         <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                             <div>
-                                <label class="block text-sm font-medium mb-2" data-fr="Adresse actuelle *" data-en="Current address *">Adresse actuelle *</label>
+                                <label class="block text-sm font-medium mb-2" data-fr="Adresse de votre domicile actuel *" data-en="Current address *">Adresse de votre domicile actuel *</label>
                                 <input type="text" name="current_address" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none" placeholder="Adresse">
                             </div>
                             <div>
-                                <label class="block text-sm font-medium mb-2" data-fr="Adresse future *" data-en="Future address *">Adresse future *</label>
+                                <label class="block text-sm font-medium mb-2" data-fr="Adresse de votre domicile futur *" data-en="Future address *">Adresse de votre domicile futur *</label>
                                 <input type="text" name="future_address" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none" placeholder="Adresse">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Property Type -->
+                    <!-- Type de Propriété -->
                     <div class="mb-10">
                         <h3 class="text-lg md:text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
                             <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">3</span>
-                            <span data-fr="Type de propriété" data-en="Property type">Type de propriété</span>
+                            <span data-fr="Choisir ce qui s'applique à votre déménagement *" data-en="Choose what applies to your move *">Choisir ce qui s'applique à votre déménagement *</span>
                         </h3>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                            <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
-                                <input type="checkbox" name="property_type" value="condo" class="w-5 h-5 text-primary-500">
-                                <span class="text-sm">Condo</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
-                                <input type="checkbox" name="property_type" value="appartement" class="w-5 h-5 text-primary-500">
-                                <span class="text-sm" data-fr="Appartement" data-en="Apartment">Appartement</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
-                                <input type="checkbox" name="property_type" value="maison" class="w-5 h-5 text-primary-500">
-                                <span class="text-sm" data-fr="Maison" data-en="House">Maison</span>
-                            </label>
-                            <label class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors">
-                                <input type="checkbox" name="property_type" value="commercial" class="w-5 h-5 text-primary-500">
-                                <span class="text-sm">Commercial</span>
-                            </label>
+                        <div class="space-y-6">
+                            <!-- Résidentiel -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Résidentiel</h4>
+                                <select name="residential_type" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez une option</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="appartement">Appartement</option>
+                                    <option value="maison">Maison</option>
+                                </select>
+                            </div>
+
+                            <!-- Commercial -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Commercial</h4>
+                                <select name="commercial_type" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez une option</option>
+                                    <option value="local_commercial">Local Commercial</option>
+                                    <option value="bureau_commercial">Bureau Commercial</option>
+                                    <option value="industriel">Industriel</option>
+                                </select>
+                            </div>
+
+                            <!-- Nombre d'étages -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Nombre d'étages</h4>
+                                <select name="floor_count" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez le nombre d'étages</option>
+                                    <option value="1">1 étage</option>
+                                    <option value="2">2 étages</option>
+                                    <option value="3">3 étages</option>
+                                    <option value="4">4 étages</option>
+                                    <option value="5+">5 étages et +</option>
+                                </select>
+                            </div>
+
+                            <!-- Ascenseur -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Ascenseur</h4>
+                                <select name="elevator" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Disponibilité de l'ascenseur</option>
+                                    <option value="available">Ascenseur disponible</option>
+                                    <option value="not_available">Ascenseur non disponible</option>
+                                </select>
+                            </div>
+
+                            <!-- Nombre de pièces -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Nombre de pièces (1/2 pour salle de bain)</h4>
+                                <select name="room_count" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez le nombre de pièces</option>
+                                    <option value="1.5">1 1/2</option>
+                                    <option value="2.5">2 1/2</option>
+                                    <option value="3.5">3 1/2</option>
+                                    <option value="4.5">4 1/2</option>
+                                    <option value="5.5">5 1/2</option>
+                                    <option value="6.5">6 1/2</option>
+                                    <option value="7.5">7 1/2</option>
+                                    <option value="8.5+">8 1/2 ou +</option>
+                                </select>
+                            </div>
+
+                            <!-- Nombre d'électroménager -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Nombre d'électroménager</h4>
+                                <select name="appliance_count" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez le nombre d'électroménagers</option>
+                                    <option value="1">1 électroménager</option>
+                                    <option value="2">2 électroménagers</option>
+                                    <option value="3">3 électroménagers</option>
+                                    <option value="4">4 électroménagers</option>
+                                    <option value="5">5 électroménagers</option>
+                                    <option value="6">6 électroménagers</option>
+                                    <option value="7">7 électroménagers</option>
+                                    <option value="8+">8 électroménagers ou +</option>
+                                </select>
+                            </div>
+
+                            <!-- Nombre de chambre -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3 text-gray-700 dark:text-gray-300">Nombre de chambre</h4>
+                                <select name="bedroom_count" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none">
+                                    <option value="" selected disabled>Choisissez le nombre de chambres</option>
+                                    <option value="1">1 chambre</option>
+                                    <option value="2">2 chambres</option>
+                                    <option value="3">3 chambres</option>
+                                    <option value="4">4 chambres</option>
+                                    <option value="5">5 chambres</option>
+                                    <option value="6">6 chambres</option>
+                                    <option value="7">7 chambres</option>
+                                    <option value="8+">8 chambres ou +</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Additional Instructions -->
+                    <!-- Informations supplémentaires -->
                     <div class="mb-10">
                         <h3 class="text-lg md:text-xl font-bold mb-6 pb-3 border-b dark:border-gray-700 flex items-center gap-3">
                             <span class="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-full flex items-center justify-center text-sm">4</span>
-                            <span data-fr="Instructions supplémentaires" data-en="Additional instructions">Instructions supplémentaires</span>
+                            <span data-fr="Plus d'informations à savoir indiquées?" data-en="Additional information to indicate?">Plus d'informations à savoir indiquées?</span>
                         </h3>
-                        <textarea name="instructions" rows="4" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none resize-none" placeholder="Rédigez une réponse..."></textarea>
+                        <textarea name="additional_info" rows="4" class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 focus:outline-none resize-none" placeholder="Rédigez une réponse..."></textarea>
+                    </div>
+
+                    <!-- Message de statut -->
+                    <div id="quoteFormStatus" class="mb-6 hidden">
+                        <div id="quoteSuccessMessage" class="bg-green-100 text-green-700 p-4 rounded-xl hidden">
+                            ✅ Votre demande a été envoyée avec succès! Nous vous contacterons dans les plus brefs délais.
+                        </div>
+                        <div id="quoteErrorMessage" class="bg-red-100 text-red-700 p-4 rounded-xl hidden">
+                            ❌ Une erreur est survenue. Veuillez réessayer.
+                        </div>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-xl font-bold text-base md:text-lg hover:shadow-lg hover:shadow-primary-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3">
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary-500 to-accent-dark text-white rounded-xl font-bold text-base md:text-lg hover:shadow-lg hover:shadow-primary-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3" id="quoteSubmitBtn">
                         <span data-fr="Envoyer ma demande" data-en="Send my request">Envoyer ma demande</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -778,7 +813,7 @@
                     </button>
 
                     <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4" data-fr="Votre candidature sera envoyée à gabellareference@gmail.com" data-en="Your application will be sent to gabellareference@gmail.com">
-                        <i class="fas fa-envelope mr-2"></i>Votre candidature sera envoyée à gabellareference@gmail.com
+                        <i class="fas fa-envelope mr-2"></i>Votre candidature sera envoyée à exonetransport@gmail.com
                     </p>
                 </form>
             </div>
@@ -836,17 +871,10 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
                 <div class="col-span-2 md:col-span-1">
-                     <a href="#" class="flex items-center space-x-3 logo-shine">
-                   
-                    <div class="hidden sm:block">
-
+                    <a href="#" class="flex items-center space-x-3 logo-shine">
                         <img src="LOGO EXONE 2.png" alt="EXONE TRANSPORT" class="h-8 md:h-10 w-auto">
-                        
-                    </div>
-                    <a href="#" class="flex items-center space-x-3">
                         <span class="text-xl md:text-2xl font-bold gradient-text font-heading">EXONE TRANSPORT</span>
-                    </a> 
-                </a>
+                    </a>
                     <p class="text-gray-400 text-sm" data-fr="Votre partenaire de confiance pour tous vos besoins de déménagement." data-en="Your trusted partner for all your moving needs.">
                         Votre partenaire de confiance pour tous vos besoins de déménagement.
                     </p>
@@ -895,7 +923,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+    <a href="https://wa.me/680479880" target="_blank" class="whatsapp-btn">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -922,7 +950,6 @@
         <span id="toastMessage"></span>
     </div>
 
-    
-      <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     --gradient-dark: linear-gradient(135deg, #d3dee6 0%, #003d7a 100%);
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --nav-bg: #ffffff; /* Blanc pour la navigation */
+    --nav-bg: #e3dcdc; /* Blanc pour la navigation */
     --card-bg: #ffffff; /* Blanc pour les cartes */
     --text-primary: #1a202c; /* Couleur de texte foncée pour contraste */
     --text-secondary: #0d0d0e; /* Couleur de texte secondaire */
@@ -18,19 +18,13 @@
     --text-secondary: #4a5568;
 }
 
-/* Styles pour la barre de navigation */
-nav, .navbar, header, [class*="nav"], [class*="header"] {
-    background-color: var(--nav-bg) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
+
 
 /* Styles pour les cartes */
 .card, [class*="card"], [class*="Card"], .service-card, .glass, .bg-gray-800, .bg-gray-900, .bg-dark, [class*="bg-"] {
     background-color: var(--card-bg) !important;
     color: var(--text-primary) !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(22, 22, 22, 0.1) !important;
 }
 
 /* Ajustement des couleurs de texte dans les éléments blancs */
@@ -158,13 +152,7 @@ section, .section, [class*="section"] {
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Hero Background */
-        .hero-bg {
-            background: linear-gradient(-45deg, #001a2b, #003d7a, #0066cc, #00a8ff);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
+        /* Gradient Background Animation */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -594,7 +582,7 @@ section, .section, [class*="section"] {
             bottom: 100px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: #10b981;
+            background: #1e9dff;
             color: white;
             padding: 1rem 2rem;
             border-radius: 0.75rem;
