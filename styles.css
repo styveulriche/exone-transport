@@ -1,143 +1,178 @@
-:root {
-    --gradient-primary: linear-gradient(135deg, #00a8ff 0%, #0066cc 50%, #003d7a 100%);
-    --gradient-dark: linear-gradient(135deg, #d3dee6 0%, #003d7a 100%);
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --nav-bg: #e3dcdc; /* Blanc pour la navigation */
-    --card-bg: #ffffff; /* Blanc pour les cartes */
-    --text-primary: #1a202c; /* Couleur de texte foncée pour contraste */
-    --text-secondary: #0d0d0e; /* Couleur de texte secondaire */
-}
 
-.dark {
-    --glass-bg: rgba(0, 0, 0, 0.3);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --nav-bg: #ffffff; /* Garde la navigation blanche même en dark mode */
-    --card-bg: #ffffff; /* Garde les cartes blanches même en dark mode */
-    --text-primary: #1a202c; /* Texte foncé pour contraste */
-    --text-secondary: #4a5568;
-}
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f4ff',
+                            100: '#b3dfff',
+                            200: '#80caff',
+                            300: '#4db5ff',
+                            400: '#1aa0ff',
+                            500: '#0088e6',
+                            600: '#006bb3',
+                            700: '#004d80',
+                            800: '#00304d',
+                            900: '#001a2b'
+                        },
+                        accent: {
+                            light: '#00a8ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#003d7a'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
 
 
+       :root {
+           --gradient-primary: linear-gradient(135deg, #00a8ff 0%, #0066cc 50%, #003d7a 100%);
+           --gradient-dark: linear-gradient(135deg, #d3dee6 0%, #003d7a 100%);
+           --glass-bg: rgba(255, 255, 255, 0.1);
+           --glass-border: rgba(255, 255, 255, 0.2);
+           --nav-bg: #e3dcdc; /* Blanc pour la navigation */
+           --card-bg: #ffffff; /* Blanc pour les cartes */
+           --text-primary: #1a202c; /* Couleur de texte foncée pour contraste */
+           --text-secondary: #0d0d0e; /* Couleur de texte secondaire */
+       }
 
-/* Styles pour les cartes */
-.card, [class*="card"], [class*="Card"], .service-card, .glass, .bg-gray-800, .bg-gray-900, .bg-dark, [class*="bg-"] {
-    background-color: var(--card-bg) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid rgba(22, 22, 22, 0.1) !important;
-}
-
-/* Ajustement des couleurs de texte dans les éléments blancs */
-nav *, .navbar *, header *, .card *, [class*="card"] *, .service-card * {
-    color: var(--text-primary) !important;
-}
-
-/* Ajustement spécifique pour les liens dans la navigation */
-nav a, .navbar a, header a {
-    color: var(--text-primary) !important;
-}
-
-nav a:hover, .navbar a:hover, header a:hover {
-    color: #0066cc !important;
-}
-
-/* Ajustement pour les titres dans les cartes */
-.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
-[class*="card"] h1, [class*="card"] h2, [class*="card"] h3,
-[class*="card"] h4, [class*="card"] h5, [class*="card"] h6 {
-    color: var(--text-primary) !important;
-}
-
-/* Ajustement pour les paragraphes dans les cartes */
-.card p, [class*="card"] p {
-    color: var(--text-secondary) !important;
-}
-
-/* Ajustement pour les effets glass sur fond blanc */
-.glass {
-    background: rgba(221, 217, 217, 0.95) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Ajustement pour les boutons dans les cartes */
-.card button, [class*="card"] button {
-    background-color: #0066cc !important;
-    color: rgb(187, 183, 183) !important;
-    border: none !important;
-}
-
-.card button:hover, [class*="card"] button:hover {
-    background-color: #0052a3 !important;
-}
-
-/* Ajustement pour les bordures et ombres */
-.card, .service-card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-}
-
-.card:hover, .service-card:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Ajustement pour le scrollbar */
-::-webkit-scrollbar-track {
-    background: #b4b1b1 !important;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00a8ff, #0066cc) !important;
-}
-
-/* Ajustement pour les états hover sur navigation */
-nav a:hover, .navbar a:hover {
-    background-color: rgba(0, 102, 204, 0.1) !important;
-}
-
-/* Ajustement pour le dropdown menu */
-.dropdown-menu {
-    background-color: white !important;
-    color: var(--text-primary) !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
-
-.dropdown-menu a {
-    color: var(--text-primary) !important;
-}
-
-.dropdown-menu a:hover {
-    background-color: rgba(0, 102, 204, 0.1) !important;
-    color: #0066cc !important;
-}
-
-/* Pour s'assurer que tous les éléments de type section avec fond sombre deviennent blancs */
-section, .section, [class*="section"] {
-    background-color: transparent !important;
-}
-
-/* Exception pour le hero section si elle existe */
-.hero-bg {
-    background: linear-gradient(-45deg, #001a2b, #003d7a, #0066cc, #00a8ff) !important;
-    background-size: 400% 400% !important;
-    animation: gradientShift 15s ease infinite !important;
-}
-
-/* Garde le texte gradient pour certains éléments spécifiques */
-.gradient-text {
-    background: var(--gradient-primary) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-}
+       .dark {
+           --glass-bg: rgba(0, 0, 0, 0.3);
+           --glass-border: rgba(255, 255, 255, 0.1);
+           --nav-bg: #ffffff; /* Garde la navigation blanche même en dark mode */
+           --card-bg: #ffffff; /* Garde les cartes blanches même en dark mode */
+           --text-primary: #1a202c; /* Texte foncé pour contraste */
+           --text-secondary: #4a5568;
+       }
 
 
 
+       /* Styles pour les cartes */
+       .card, [class*="card"], [class*="Card"], .service-card, .glass, .bg-gray-800, .bg-gray-900, .bg-dark, [class*="bg-"] {
+           background-color: var(--card-bg) !important;
+           color: var(--text-primary) !important;
+           border: 1px solid rgba(22, 22, 22, 0.1) !important;
+       }
 
+       /* Ajustement des couleurs de texte dans les éléments blancs */
+       nav *, .navbar *, header *, .card *, [class*="card"] *, .service-card * {
+           color: var(--text-primary) !important;
+       }
 
-/* second site  */
+       /* Ajustement spécifique pour les liens dans la navigation */
+       nav a, .navbar a, header a {
+           color: var(--text-primary) !important;
+       }
 
- 
+       nav a:hover, .navbar a:hover, header a:hover {
+           color: #0066cc !important;
+       }
+
+       /* Ajustement pour les titres dans les cartes */
+       .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+       [class*="card"] h1, [class*="card"] h2, [class*="card"] h3,
+       [class*="card"] h4, [class*="card"] h5, [class*="card"] h6 {
+           color: var(--text-primary) !important;
+       }
+
+       /* Ajustement pour les paragraphes dans les cartes */
+       .card p, [class*="card"] p {
+           color: var(--text-secondary) !important;
+       }
+
+       /* Ajustement pour les effets glass sur fond blanc */
+       .glass {
+           background: rgba(221, 217, 217, 0.95) !important;
+           backdrop-filter: blur(10px) !important;
+           -webkit-backdrop-filter: blur(10px) !important;
+           border: 1px solid rgba(0, 0, 0, 0.1) !important;
+       }
+
+       /* Ajustement pour les boutons dans les cartes */
+       .card button, [class*="card"] button {
+           background-color: #0066cc !important;
+           color: rgb(187, 183, 183) !important;
+           border: none !important;
+       }
+
+       .card button:hover, [class*="card"] button:hover {
+           background-color: #0052a3 !important;
+       }
+
+       /* Ajustement pour les bordures et ombres */
+       .card, .service-card {
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+       }
+
+       .card:hover, .service-card:hover {
+           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2) !important;
+       }
+
+       /* Ajustement pour le scrollbar */
+       ::-webkit-scrollbar-track {
+           background: #b4b1b1 !important;
+       }
+
+       ::-webkit-scrollbar-thumb {
+           background: linear-gradient(180deg, #00a8ff, #0066cc) !important;
+       }
+
+       /* Ajustement pour les états hover sur navigation */
+       nav a:hover, .navbar a:hover {
+           background-color: rgba(0, 102, 204, 0.1) !important;
+       }
+
+       /* Ajustement pour le dropdown menu */
+       .dropdown-menu {
+           background-color: white !important;
+           color: var(--text-primary) !important;
+           border: 1px solid rgba(0, 0, 0, 0.1) !important;
+       }
+
+       .dropdown-menu a {
+           color: var(--text-primary) !important;
+       }
+
+       .dropdown-menu a:hover {
+           background-color: rgba(0, 102, 204, 0.1) !important;
+           color: #0066cc !important;
+       }
+
+       /* Pour s'assurer que tous les éléments de type section avec fond sombre deviennent blancs */
+       section, .section, [class*="section"] {
+           background-color: transparent !important;
+       }
+
+       /* Exception pour le hero section si elle existe */
+       .hero-bg {
+           background: linear-gradient(-45deg, #001a2b, #003d7a, #0066cc, #00a8ff) !important;
+           background-size: 400% 400% !important;
+           animation: gradientShift 15s ease infinite !important;
+       }
+
+       /* Garde le texte gradient pour certains éléments spécifiques */
+       .gradient-text {
+           background: var(--gradient-primary) !important;
+           -webkit-background-clip: text !important;
+           -webkit-text-fill-color: transparent !important;
+           background-clip: text !important;
+       }
+
+        .dark {
+            --glass-bg: rgba(0, 0, 0, 0.3);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --nav-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+        }
+
         * {
             scroll-behavior: smooth;
             box-sizing: border-box;
@@ -152,14 +187,12 @@ section, .section, [class*="section"] {
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Gradient Background Animation */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Glass Effect */
         .glass {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -170,7 +203,6 @@ section, .section, [class*="section"] {
             background: rgba(17, 24, 39, 0.95);
         }
 
-        /* Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -204,7 +236,6 @@ section, .section, [class*="section"] {
         .animation-delay-300 { animation-delay: 0.3s; }
         .animation-delay-400 { animation-delay: 0.4s; }
 
-        /* Particles */
         .particle {
             position: absolute;
             width: 10px;
@@ -221,12 +252,10 @@ section, .section, [class*="section"] {
             75% { transform: translate(-50px, -100px) rotate(270deg); opacity: 0.7; }
         }
 
-        /* Geometric shapes */
         .geo-shape {
             animation: float 10s ease-in-out infinite;
         }
 
-        /* Service card hover */
         .service-card {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -235,7 +264,6 @@ section, .section, [class*="section"] {
             transform: translateY(-10px) scale(1.02);
         }
 
-        /* Dropdown styles */
         .dropdown-menu {
             opacity: 0;
             visibility: hidden;
@@ -249,7 +277,6 @@ section, .section, [class*="section"] {
             transform: translateY(0);
         }
 
-        /* Mobile Menu */
         .mobile-menu {
             transform: translateX(-100%);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -259,17 +286,6 @@ section, .section, [class*="section"] {
             transform: translateX(0);
         }
 
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-
-        .accordion-content.open {
-            max-height: 500px;
-        }
-
-        /* Modal */
         .modal {
             opacity: 0;
             visibility: hidden;
@@ -281,7 +297,6 @@ section, .section, [class*="section"] {
             visibility: visible;
         }
 
-        /* Gradient text */
         .gradient-text {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -289,7 +304,6 @@ section, .section, [class*="section"] {
             background-clip: text;
         }
 
-        /* Reveal animation */
         .reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -301,7 +315,6 @@ section, .section, [class*="section"] {
             transform: translateY(0);
         }
 
-        /* WhatsApp button */
         .whatsapp-btn {
             position: fixed;
             bottom: 30px;
@@ -326,7 +339,6 @@ section, .section, [class*="section"] {
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
 
-        /* Gallery Styles */
         .gallery-container {
             position: relative;
             overflow: hidden;
@@ -403,54 +415,6 @@ section, .section, [class*="section"] {
             transform: scale(1.2);
         }
 
-        /* Image Grid */
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .image-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .image-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1rem;
-            aspect-ratio: 3/2;
-            cursor: pointer;
-        }
-
-        .image-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .image-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .image-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: flex-end;
-            padding: 1.5rem;
-        }
-
-        .image-card:hover .image-card-overlay {
-            opacity: 1;
-        }
-
-        /* Drag & Drop Zone */
         .drop-zone {
             border: 3px dashed #0066cc;
             border-radius: 1rem;
@@ -473,7 +437,6 @@ section, .section, [class*="section"] {
             background: rgba(16, 185, 129, 0.1);
         }
 
-        /* Form inputs */
         .form-input {
             transition: all 0.3s ease;
             border: 2px solid transparent;
@@ -485,7 +448,6 @@ section, .section, [class*="section"] {
             box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
         }
 
-        /* Lightbox */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -532,7 +494,6 @@ section, .section, [class*="section"] {
             transform: scale(1.1);
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -546,7 +507,6 @@ section, .section, [class*="section"] {
             border-radius: 5px;
         }
 
-        /* Responsive fixes */
         @media (max-width: 640px) {
             .whatsapp-btn {
                 bottom: 20px;
@@ -562,7 +522,6 @@ section, .section, [class*="section"] {
             }
         }
 
-        /* Loading spinner */
         .spinner {
             width: 24px;
             height: 24px;
@@ -576,7 +535,6 @@ section, .section, [class*="section"] {
             to { transform: rotate(360deg); }
         }
 
-        /* Toast notification */
         .toast {
             position: fixed;
             bottom: 100px;
@@ -603,24 +561,94 @@ section, .section, [class*="section"] {
             background: #ef4444;
         }
 
-        /* Form sections responsive */
-        @media (max-width: 768px) {
-            .grid-cols-2,
-            .grid-cols-3,
-            .grid-cols-4,
-            .grid-cols-5,
-            .grid-cols-6 {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
+        .hero-bg {
+            background: linear-gradient(-45deg, #001a2b, #003d7a, #0066cc, #00a8ff) !important;
+            background-size: 400% 400% !important;
+            animation: gradientShift 15s ease infinite !important;
         }
 
-        @media (max-width: 480px) {
-            .grid-cols-2,
-            .grid-cols-3,
-            .grid-cols-4,
-            .grid-cols-5,
-            .grid-cols-6 {
-                grid-template-columns: 1fr !important;
+        /* Full screen modal styles */
+        .fullscreen-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            overflow-y: auto;
+        }
+
+        .fullscreen-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .fullscreen-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        .fullscreen-modal-content {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .fullscreen-modal-inner {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 2rem 0;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+        }
+
+        .fullscreen-modal.active .fullscreen-modal-inner {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.25rem;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            transition: transform 0.3s ease;
+            color: #333;
+        }
+
+        .modal-close-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .fullscreen-modal-content {
+                padding: 1rem;
+            }
+
+            .fullscreen-modal-inner {
+                margin: 1rem 0;
+            }
+
+            .modal-close-btn {
+                top: 10px;
+                right: 10px;
             }
         }
-    
